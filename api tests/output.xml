@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.10.0 on win32)" generated="20211207 09:59:12.579" rpa="false">
+<suite id="s1" name="Valid Tests" source="C:\Users\BPetre\Documents\Projects\Eclipse\ApiTest\api tests\valid_tests.robot">
+<test id="s1-t1" name="Adding an user and deleting it">
+<kw name="Create a dictionary for user" library="resources">
+<assign>
+<var>${user_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>name=bodi</arg>
+<arg>email=AppTest@test.com</arg>
+<arg>gender=male</arg>
+<arg>status=active</arg>
+</arguments>
+<assign>
+<var>${user_dict}</var>
+</assign>
+<msg timestamp="20211207 09:59:12.620" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 09:59:12.619" endtime="20211207 09:59:12.620"></status>
+</kw>
+<msg timestamp="20211207 09:59:12.620" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 09:59:12.619" endtime="20211207 09:59:12.620"></status>
+</kw>
+<kw name="Add An User From Dict">
+<arguments>
+<arg>${user_dict}</arg>
+</arguments>
+<assign>
+<var>${id}=</var>
+</assign>
+<msg timestamp="20211207 09:59:12.622" level="FAIL">No keyword with name 'Add An User From Dict' found.</msg>
+<status status="FAIL" starttime="20211207 09:59:12.622" endtime="20211207 09:59:12.622"></status>
+</kw>
+<status status="FAIL" starttime="20211207 09:59:12.619" endtime="20211207 09:59:12.623" critical="yes">No keyword with name 'Add An User From Dict' found.</status>
+</test>
+<test id="s1-t2" name="Adding a post for an user and deleting it after">
+<kw name="Create a dictionary for user" library="resources">
+<assign>
+<var>${user_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>name=bodi</arg>
+<arg>email=AppTest@test.com</arg>
+<arg>gender=male</arg>
+<arg>status=active</arg>
+</arguments>
+<assign>
+<var>${user_dict}</var>
+</assign>
+<msg timestamp="20211207 09:59:12.625" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 09:59:12.624" endtime="20211207 09:59:12.625"></status>
+</kw>
+<msg timestamp="20211207 09:59:12.625" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 09:59:12.624" endtime="20211207 09:59:12.625"></status>
+</kw>
+<kw name="Create a dictionary for post" library="resources">
+<assign>
+<var>${post_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>user_id=203</arg>
+<arg>title=Test</arg>
+<arg>body=TestTestTest</arg>
+</arguments>
+<assign>
+<var>${post_dict}</var>
+</assign>
+<msg timestamp="20211207 09:59:12.625" level="INFO">${post_dict} = {'id': '500', 'user_id': '203', 'title': 'Test', 'body': 'TestTestTest'}</msg>
+<status status="PASS" starttime="20211207 09:59:12.625" endtime="20211207 09:59:12.626"></status>
+</kw>
+<msg timestamp="20211207 09:59:12.626" level="INFO">${post_dict} = {'id': '500', 'user_id': '203', 'title': 'Test', 'body': 'TestTestTest'}</msg>
+<status status="PASS" starttime="20211207 09:59:12.625" endtime="20211207 09:59:12.626"></status>
+</kw>
+<kw name="Add A Post For An User">
+<arguments>
+<arg>${user_dict}</arg>
+<arg>${post_dict}</arg>
+</arguments>
+<assign>
+<var>${post_id}</var>
+<var>${user_id}=</var>
+</assign>
+<msg timestamp="20211207 09:59:12.627" level="FAIL">No keyword with name 'Add A Post For An User' found.</msg>
+<status status="FAIL" starttime="20211207 09:59:12.627" endtime="20211207 09:59:12.627"></status>
+</kw>
+<status status="FAIL" starttime="20211207 09:59:12.623" endtime="20211207 09:59:12.627" critical="yes">No keyword with name 'Add A Post For An User' found.</status>
+</test>
+<status status="FAIL" starttime="20211207 09:59:12.582" endtime="20211207 09:59:12.628"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2">Critical Tests</stat>
+<stat pass="0" fail="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" id="s1" name="Valid Tests">Valid Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211207 09:59:12.610" level="ERROR">Error in file 'C:\Users\BPetre\Documents\Projects\Eclipse\ApiTest\api tests\valid_tests.robot' on line 2: Importing test library 'requests_api_app.ApiAPP' failed: ModuleNotFoundError: No module named 'requests_api_app'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\BPetre\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\BPetre\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\BPetre\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\BPetre\AppData\Local\Programs\Python\Python310
+  C:\Users\BPetre\AppData\Local\Programs\Python\Python310\lib\site-packages</msg>
+</errors>
+</robot>

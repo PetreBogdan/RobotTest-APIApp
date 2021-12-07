@@ -2,6 +2,7 @@ from requestapi import RequestsApi
 from datetime import datetime
 from apientity import Entity
 import textwrap
+from builtins import staticmethod
 
 
 class Todo(Entity):
@@ -83,3 +84,7 @@ class Todo(Entity):
                             title: {dictionary['title']}
                             due_on: {Todo.format_date_out(dictionary['due_on'])}
                             status: {dictionary['status']}"""))
+        
+    @staticmethod
+    def delete_todo_by_id(todo_id):
+        RequestsApi.delete_request(f"todos/{todo_id}")

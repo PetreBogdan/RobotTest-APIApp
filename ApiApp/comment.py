@@ -1,5 +1,6 @@
 from requestapi import RequestsApi
 from apientity import Entity
+from builtins import staticmethod
 
 
 class Comment(Entity):
@@ -39,3 +40,7 @@ class Comment(Entity):
         :return:
         """
         Comment.display_entity_by_id("comments", id_comment)
+        
+    @staticmethod
+    def delete_comment_by_id(id_comment):
+        RequestsApi.delete_request(f"comments/{id_comment}")

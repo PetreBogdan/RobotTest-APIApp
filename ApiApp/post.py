@@ -1,6 +1,7 @@
 from requestapi import RequestsApi
 from comment import Comment
 from apientity import Entity
+from builtins import staticmethod
 
 
 class Post(Entity):
@@ -49,4 +50,8 @@ class Post(Entity):
         """
         response = RequestsApi.get_request(f"posts?id={self.post['id']}")
         Post.display_entity(response['data'][0])
+    
+    @staticmethod    
+    def delete_post_by_id(id_post):
+        RequestsApi.delete_request(f"posts/{id_post}")
         
