@@ -1,44 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.10.0 on win32)" generated="20211207 12:42:15.226" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.10.0 on win32)" generated="20211207 16:19:49.252" rpa="false">
 <suite id="s1" name="ApiTest" source="C:\Users\BPetre\Documents\Projects\Eclipse\ApiTest">
 <suite id="s1-s1" name="Api Tests" source="C:\Users\BPetre\Documents\Projects\Eclipse\ApiTest\api tests">
-<suite id="s1-s1-s1" name="Invalid Tests" source="C:\Users\BPetre\Documents\Projects\Eclipse\ApiTest\api tests\invalid_tests.robot">
-<test id="s1-s1-s1-t1" name="Invalid name">
-<kw name="Send an invalid dictionary to the API">
-<arguments>
-<arg>12355</arg>
-<arg>${email}</arg>
-<arg>${gender}</arg>
-<arg>${status}</arg>
-</arguments>
-<kw name="Create Dictionary" library="BuiltIn">
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<arguments>
-<arg>id=500</arg>
-<arg>name=${name}</arg>
-<arg>email=${email}</arg>
-<arg>gender=${gender}</arg>
-<arg>status=${status}</arg>
-</arguments>
-<assign>
-<var>${user_dict}</var>
-</assign>
-<msg timestamp="20211207 12:42:15.409" level="INFO">${user_dict} = {'id': '500', 'name': '12355', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
-<status status="PASS" starttime="20211207 12:42:15.408" endtime="20211207 12:42:15.409"></status>
-</kw>
-<kw name="Invalid Dict Returns Http Error" library="requests_api_app.ApiAPP">
-<arguments>
-<arg>${user_dict}</arg>
-</arguments>
-<msg timestamp="20211207 12:42:16.326" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
-  warnings.warn(</msg>
-<status status="PASS" starttime="20211207 12:42:15.409" endtime="20211207 12:42:16.327"></status>
-</kw>
-<status status="PASS" starttime="20211207 12:42:15.408" endtime="20211207 12:42:16.327"></status>
-</kw>
-<status status="PASS" starttime="20211207 12:42:15.407" endtime="20211207 12:42:16.327" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t2" name="Invalid mail">
+<suite id="s1-s1-s1" name="Invalid Tests 1" source="C:\Users\BPetre\Documents\Projects\Eclipse\ApiTest\api tests\invalid_tests_1.robot">
+<test id="s1-s1-s1-t1" name="Invalid mail">
 <kw name="Send an invalid dictionary to the API">
 <arguments>
 <arg>${name}</arg>
@@ -58,23 +23,23 @@
 <assign>
 <var>${user_dict}</var>
 </assign>
-<msg timestamp="20211207 12:42:16.330" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'email', 'gender': 'male', 'status': 'active'}</msg>
-<status status="PASS" starttime="20211207 12:42:16.329" endtime="20211207 12:42:16.330"></status>
+<msg timestamp="20211207 16:19:49.432" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'email', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:19:49.431" endtime="20211207 16:19:49.432"></status>
 </kw>
 <kw name="Invalid Dict Returns Http Error" library="requests_api_app.ApiAPP">
 <arguments>
 <arg>${user_dict}</arg>
 </arguments>
-<msg timestamp="20211207 12:42:16.813" level="INFO">User cannot be added</msg>
-<msg timestamp="20211207 12:42:16.814" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+<msg timestamp="20211207 16:19:50.788" level="INFO">User cannot be added</msg>
+<msg timestamp="20211207 16:19:50.789" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
   warnings.warn(</msg>
-<status status="PASS" starttime="20211207 12:42:16.330" endtime="20211207 12:42:16.814"></status>
+<status status="PASS" starttime="20211207 16:19:49.432" endtime="20211207 16:19:50.790"></status>
 </kw>
-<status status="PASS" starttime="20211207 12:42:16.328" endtime="20211207 12:42:16.815"></status>
+<status status="PASS" starttime="20211207 16:19:49.431" endtime="20211207 16:19:50.791"></status>
 </kw>
-<status status="PASS" starttime="20211207 12:42:16.328" endtime="20211207 12:42:16.816" critical="yes"></status>
+<status status="PASS" starttime="20211207 16:19:49.430" endtime="20211207 16:19:50.792" critical="yes"></status>
 </test>
-<test id="s1-s1-s1-t3" name="Invalid gender">
+<test id="s1-s1-s1-t2" name="Invalid gender">
 <kw name="Send an invalid dictionary to the API">
 <arguments>
 <arg>${name}</arg>
@@ -94,23 +59,23 @@
 <assign>
 <var>${user_dict}</var>
 </assign>
-<msg timestamp="20211207 12:42:16.823" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'ifdvn', 'status': 'active'}</msg>
-<status status="PASS" starttime="20211207 12:42:16.821" endtime="20211207 12:42:16.824"></status>
+<msg timestamp="20211207 16:19:50.800" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'ifdvn', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:19:50.798" endtime="20211207 16:19:50.801"></status>
 </kw>
 <kw name="Invalid Dict Returns Http Error" library="requests_api_app.ApiAPP">
 <arguments>
 <arg>${user_dict}</arg>
 </arguments>
-<msg timestamp="20211207 12:42:17.340" level="INFO">User cannot be added</msg>
-<msg timestamp="20211207 12:42:17.340" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+<msg timestamp="20211207 16:19:51.442" level="INFO">User cannot be added</msg>
+<msg timestamp="20211207 16:19:51.443" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
   warnings.warn(</msg>
-<status status="PASS" starttime="20211207 12:42:16.824" endtime="20211207 12:42:17.341"></status>
+<status status="PASS" starttime="20211207 16:19:50.801" endtime="20211207 16:19:51.444"></status>
 </kw>
-<status status="PASS" starttime="20211207 12:42:16.819" endtime="20211207 12:42:17.341"></status>
+<status status="PASS" starttime="20211207 16:19:50.795" endtime="20211207 16:19:51.445"></status>
 </kw>
-<status status="PASS" starttime="20211207 12:42:16.817" endtime="20211207 12:42:17.341" critical="yes"></status>
+<status status="PASS" starttime="20211207 16:19:50.794" endtime="20211207 16:19:51.446" critical="yes"></status>
 </test>
-<test id="s1-s1-s1-t4" name="Invalid status">
+<test id="s1-s1-s1-t3" name="Invalid status">
 <kw name="Send an invalid dictionary to the API">
 <arguments>
 <arg>${name}</arg>
@@ -130,39 +95,556 @@
 <assign>
 <var>${user_dict}</var>
 </assign>
-<msg timestamp="20211207 12:42:17.343" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': '8328fhh'}</msg>
-<status status="PASS" starttime="20211207 12:42:17.343" endtime="20211207 12:42:17.343"></status>
+<msg timestamp="20211207 16:19:51.454" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': '8328fhh'}</msg>
+<status status="PASS" starttime="20211207 16:19:51.453" endtime="20211207 16:19:51.455"></status>
 </kw>
 <kw name="Invalid Dict Returns Http Error" library="requests_api_app.ApiAPP">
 <arguments>
 <arg>${user_dict}</arg>
 </arguments>
-<msg timestamp="20211207 12:42:17.853" level="INFO">User cannot be added</msg>
-<msg timestamp="20211207 12:42:17.853" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+<msg timestamp="20211207 16:19:52.185" level="INFO">User cannot be added</msg>
+<msg timestamp="20211207 16:19:52.185" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
   warnings.warn(</msg>
-<status status="PASS" starttime="20211207 12:42:17.344" endtime="20211207 12:42:17.853"></status>
+<status status="PASS" starttime="20211207 16:19:51.455" endtime="20211207 16:19:52.185"></status>
 </kw>
-<status status="PASS" starttime="20211207 12:42:17.342" endtime="20211207 12:42:17.854"></status>
+<status status="PASS" starttime="20211207 16:19:51.450" endtime="20211207 16:19:52.185"></status>
 </kw>
-<status status="PASS" starttime="20211207 12:42:17.342" endtime="20211207 12:42:17.854" critical="yes"></status>
+<status status="PASS" starttime="20211207 16:19:51.448" endtime="20211207 16:19:52.186" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20211207 12:42:15.285" endtime="20211207 12:42:17.854"></status>
+<status status="PASS" starttime="20211207 16:19:49.311" endtime="20211207 16:19:52.186"></status>
 </suite>
-<status status="PASS" starttime="20211207 12:42:15.283" endtime="20211207 12:42:17.857"></status>
+<suite id="s1-s1-s2" name="Invalid Tests 2" source="C:\Users\BPetre\Documents\Projects\Eclipse\ApiTest\api tests\invalid_tests_2.robot">
+<test id="s1-s1-s2-t1" name="No name">
+<kw name="Send a dictionary with missing keys">
+<arguments>
+<arg>name</arg>
+</arguments>
+<kw name="Create Dict Without Param" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${param}</arg>
+</arguments>
+<assign>
+<var>${user_dict}</var>
+</assign>
+<msg timestamp="20211207 16:19:52.193" level="INFO">${user_dict} = {'id': '500', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:19:52.192" endtime="20211207 16:19:52.193"></status>
+</kw>
+<kw name="Invalid Dict Returns Http Error" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${user_dict}</arg>
+</arguments>
+<msg timestamp="20211207 16:19:52.777" level="INFO">User cannot be added</msg>
+<msg timestamp="20211207 16:19:52.777" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:19:52.193" endtime="20211207 16:19:52.778"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:19:52.192" endtime="20211207 16:19:52.778"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:19:52.191" endtime="20211207 16:19:52.778" critical="yes"></status>
+</test>
+<test id="s1-s1-s2-t2" name="No email">
+<kw name="Send a dictionary with missing keys">
+<arguments>
+<arg>email</arg>
+</arguments>
+<kw name="Create Dict Without Param" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${param}</arg>
+</arguments>
+<assign>
+<var>${user_dict}</var>
+</assign>
+<msg timestamp="20211207 16:19:52.780" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:19:52.779" endtime="20211207 16:19:52.780"></status>
+</kw>
+<kw name="Invalid Dict Returns Http Error" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${user_dict}</arg>
+</arguments>
+<msg timestamp="20211207 16:19:53.371" level="INFO">User cannot be added</msg>
+<msg timestamp="20211207 16:19:53.371" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:19:52.780" endtime="20211207 16:19:53.371"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:19:52.779" endtime="20211207 16:19:53.372"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:19:52.779" endtime="20211207 16:19:53.372" critical="yes"></status>
+</test>
+<test id="s1-s1-s2-t3" name="No gender">
+<kw name="Send a dictionary with missing keys">
+<arguments>
+<arg>gender</arg>
+</arguments>
+<kw name="Create Dict Without Param" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${param}</arg>
+</arguments>
+<assign>
+<var>${user_dict}</var>
+</assign>
+<msg timestamp="20211207 16:19:53.374" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:19:53.373" endtime="20211207 16:19:53.374"></status>
+</kw>
+<kw name="Invalid Dict Returns Http Error" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${user_dict}</arg>
+</arguments>
+<msg timestamp="20211207 16:19:53.970" level="INFO">User cannot be added</msg>
+<msg timestamp="20211207 16:19:53.971" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:19:53.374" endtime="20211207 16:19:53.971"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:19:53.373" endtime="20211207 16:19:53.972"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:19:53.373" endtime="20211207 16:19:53.972" critical="yes"></status>
+</test>
+<test id="s1-s1-s2-t4" name="No status">
+<kw name="Send a dictionary with missing keys">
+<arguments>
+<arg>status</arg>
+</arguments>
+<kw name="Create Dict Without Param" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${param}</arg>
+</arguments>
+<assign>
+<var>${user_dict}</var>
+</assign>
+<msg timestamp="20211207 16:19:53.976" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male'}</msg>
+<status status="PASS" starttime="20211207 16:19:53.976" endtime="20211207 16:19:53.977"></status>
+</kw>
+<kw name="Invalid Dict Returns Http Error" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${user_dict}</arg>
+</arguments>
+<msg timestamp="20211207 16:19:54.567" level="INFO">User cannot be added</msg>
+<msg timestamp="20211207 16:19:54.567" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:19:53.977" endtime="20211207 16:19:54.567"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:19:53.974" endtime="20211207 16:19:54.567"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:19:53.973" endtime="20211207 16:19:54.568" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20211207 16:19:52.188" endtime="20211207 16:19:54.568"></status>
 </suite>
-<status status="PASS" starttime="20211207 12:42:15.263" endtime="20211207 12:42:17.860"></status>
+<suite id="s1-s1-s3" name="Valid Tests" source="C:\Users\BPetre\Documents\Projects\Eclipse\ApiTest\api tests\valid_tests.robot">
+<test id="s1-s1-s3-t1" name="Adding an user and deleting it">
+<kw name="Create a dictionary for user" library="resources">
+<assign>
+<var>${user_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>name=bodi</arg>
+<arg>email=AppTest@test.com</arg>
+<arg>gender=male</arg>
+<arg>status=active</arg>
+</arguments>
+<assign>
+<var>${user_dict}</var>
+</assign>
+<msg timestamp="20211207 16:19:54.577" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:19:54.576" endtime="20211207 16:19:54.577"></status>
+</kw>
+<msg timestamp="20211207 16:19:54.577" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:19:54.576" endtime="20211207 16:19:54.577"></status>
+</kw>
+<kw name="Add An User From Dict" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${user_dict}</arg>
+</arguments>
+<assign>
+<var>${id}</var>
+</assign>
+<msg timestamp="20211207 16:19:55.206" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20211207 16:19:55.206" level="INFO">${id} = 2803</msg>
+<status status="PASS" starttime="20211207 16:19:54.577" endtime="20211207 16:19:55.206"></status>
+</kw>
+<kw name="Verify If User Was Added" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${id}</arg>
+</arguments>
+<msg timestamp="20211207 16:19:55.826" level="INFO">id: 2803
+name: bodi
+email: AppTest@test.com
+gender: male
+status: active</msg>
+<msg timestamp="20211207 16:19:55.827" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:19:55.207" endtime="20211207 16:19:55.827"></status>
+</kw>
+<kw name="Delete User" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${id}</arg>
+</arguments>
+<msg timestamp="20211207 16:19:56.436" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:19:55.827" endtime="20211207 16:19:56.437"></status>
+</kw>
+<kw name="Deleted User Should Not Exist" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${id}</arg>
+</arguments>
+<msg timestamp="20211207 16:19:57.059" level="INFO">User not found</msg>
+<msg timestamp="20211207 16:19:57.059" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:19:56.437" endtime="20211207 16:19:57.060"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:19:54.576" endtime="20211207 16:19:57.060" critical="yes"></status>
+</test>
+<test id="s1-s1-s3-t2" name="Adding a post for an user and deleting it after">
+<kw name="Create a dictionary for user" library="resources">
+<assign>
+<var>${user_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>name=bodi</arg>
+<arg>email=AppTest@test.com</arg>
+<arg>gender=male</arg>
+<arg>status=active</arg>
+</arguments>
+<assign>
+<var>${user_dict}</var>
+</assign>
+<msg timestamp="20211207 16:19:57.063" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:19:57.063" endtime="20211207 16:19:57.064"></status>
+</kw>
+<msg timestamp="20211207 16:19:57.064" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:19:57.062" endtime="20211207 16:19:57.064"></status>
+</kw>
+<kw name="Create a dictionary for post" library="resources">
+<assign>
+<var>${post_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>user_id=203</arg>
+<arg>title=Test</arg>
+<arg>body=TestTestTest</arg>
+</arguments>
+<assign>
+<var>${post_dict}</var>
+</assign>
+<msg timestamp="20211207 16:19:57.065" level="INFO">${post_dict} = {'id': '500', 'user_id': '203', 'title': 'Test', 'body': 'TestTestTest'}</msg>
+<status status="PASS" starttime="20211207 16:19:57.064" endtime="20211207 16:19:57.065"></status>
+</kw>
+<msg timestamp="20211207 16:19:57.065" level="INFO">${post_dict} = {'id': '500', 'user_id': '203', 'title': 'Test', 'body': 'TestTestTest'}</msg>
+<status status="PASS" starttime="20211207 16:19:57.064" endtime="20211207 16:19:57.065"></status>
+</kw>
+<kw name="Add A Post For An User" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${user_dict}</arg>
+<arg>${post_dict}</arg>
+</arguments>
+<assign>
+<var>${post_id}</var>
+<var>${user_id}</var>
+</assign>
+<msg timestamp="20211207 16:19:58.384" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20211207 16:19:58.385" level="INFO">${post_id} = 1457</msg>
+<msg timestamp="20211207 16:19:58.385" level="INFO">${user_id} = 2804</msg>
+<status status="PASS" starttime="20211207 16:19:57.065" endtime="20211207 16:19:58.385"></status>
+</kw>
+<kw name="Verify If Post Was Added" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${post_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:19:59.130" level="INFO">id: 1457
+user_id: 2804
+title: Test
+body: TestTestTest</msg>
+<msg timestamp="20211207 16:19:59.131" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:19:58.385" endtime="20211207 16:19:59.132"></status>
+</kw>
+<kw name="Delete Post" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${post_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:19:59.741" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:19:59.132" endtime="20211207 16:19:59.741"></status>
+</kw>
+<kw name="Deleted Post Should Not Exist" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${post_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:20:00.504" level="INFO">Post not found</msg>
+<msg timestamp="20211207 16:20:00.504" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:19:59.742" endtime="20211207 16:20:00.504"></status>
+</kw>
+<kw name="Delete User" library="requests_api_app.ApiAPP" type="teardown">
+<arguments>
+<arg>${user_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:20:01.128" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:20:00.504" endtime="20211207 16:20:01.128"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:19:57.062" endtime="20211207 16:20:01.128" critical="yes"></status>
+</test>
+<test id="s1-s1-s3-t3" name="Adding a comment for a post and deleting it after">
+<kw name="Create a dictionary for user" library="resources">
+<assign>
+<var>${user_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>name=bodi</arg>
+<arg>email=AppTest@test.com</arg>
+<arg>gender=male</arg>
+<arg>status=active</arg>
+</arguments>
+<assign>
+<var>${user_dict}</var>
+</assign>
+<msg timestamp="20211207 16:20:01.130" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:20:01.130" endtime="20211207 16:20:01.130"></status>
+</kw>
+<msg timestamp="20211207 16:20:01.130" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:20:01.129" endtime="20211207 16:20:01.131"></status>
+</kw>
+<kw name="Create a dictionary for post" library="resources">
+<assign>
+<var>${post_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>user_id=203</arg>
+<arg>title=Test</arg>
+<arg>body=TestTestTest</arg>
+</arguments>
+<assign>
+<var>${post_dict}</var>
+</assign>
+<msg timestamp="20211207 16:20:01.131" level="INFO">${post_dict} = {'id': '500', 'user_id': '203', 'title': 'Test', 'body': 'TestTestTest'}</msg>
+<status status="PASS" starttime="20211207 16:20:01.131" endtime="20211207 16:20:01.131"></status>
+</kw>
+<msg timestamp="20211207 16:20:01.132" level="INFO">${post_dict} = {'id': '500', 'user_id': '203', 'title': 'Test', 'body': 'TestTestTest'}</msg>
+<status status="PASS" starttime="20211207 16:20:01.131" endtime="20211207 16:20:01.132"></status>
+</kw>
+<kw name="Create a dictionary for a comment" library="resources">
+<assign>
+<var>${comment_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>post_id=203</arg>
+<arg>name=AppTest2</arg>
+<arg>email=AppTest2@Test.com</arg>
+<arg>body=Test</arg>
+</arguments>
+<assign>
+<var>${comment_dict}</var>
+</assign>
+<msg timestamp="20211207 16:20:01.133" level="INFO">${comment_dict} = {'id': '500', 'post_id': '203', 'name': 'AppTest2', 'email': 'AppTest2@Test.com', 'body': 'Test'}</msg>
+<status status="PASS" starttime="20211207 16:20:01.133" endtime="20211207 16:20:01.133"></status>
+</kw>
+<msg timestamp="20211207 16:20:01.134" level="INFO">${comment_dict} = {'id': '500', 'post_id': '203', 'name': 'AppTest2', 'email': 'AppTest2@Test.com', 'body': 'Test'}</msg>
+<status status="PASS" starttime="20211207 16:20:01.132" endtime="20211207 16:20:01.134"></status>
+</kw>
+<kw name="Add A Comment For A Post" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${user_dict}</arg>
+<arg>${post_dict}</arg>
+<arg>${comment_dict}</arg>
+</arguments>
+<assign>
+<var>${comment_id}</var>
+<var>${post_id}</var>
+<var>${user_id}</var>
+</assign>
+<msg timestamp="20211207 16:20:03.041" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20211207 16:20:03.041" level="INFO">${comment_id} = 1422</msg>
+<msg timestamp="20211207 16:20:03.041" level="INFO">${post_id} = 1458</msg>
+<msg timestamp="20211207 16:20:03.041" level="INFO">${user_id} = 2805</msg>
+<status status="PASS" starttime="20211207 16:20:01.134" endtime="20211207 16:20:03.042"></status>
+</kw>
+<kw name="Verify If The Comment Was Added" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${comment_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:20:03.631" level="INFO">id: 1422
+post_id: 1458
+name: AppTest2
+email: AppTest2@Test.com
+body: Test</msg>
+<msg timestamp="20211207 16:20:03.632" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:20:03.042" endtime="20211207 16:20:03.632"></status>
+</kw>
+<kw name="Delete Comment" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${comment_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:20:04.233" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:20:03.632" endtime="20211207 16:20:04.233"></status>
+</kw>
+<kw name="Deleted Comment Should Not Exist" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${comment_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:20:04.828" level="INFO">Comment not found</msg>
+<msg timestamp="20211207 16:20:04.829" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:20:04.234" endtime="20211207 16:20:04.829"></status>
+</kw>
+<kw name="Delete User" library="requests_api_app.ApiAPP" type="teardown">
+<arguments>
+<arg>${user_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:20:05.451" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:20:04.830" endtime="20211207 16:20:05.452"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:20:01.129" endtime="20211207 16:20:05.453" critical="yes"></status>
+</test>
+<test id="s1-s1-s3-t4" name="Adding a todo for a user and deleting it after">
+<kw name="Create a dictionary for user" library="resources">
+<assign>
+<var>${user_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>name=bodi</arg>
+<arg>email=AppTest@test.com</arg>
+<arg>gender=male</arg>
+<arg>status=active</arg>
+</arguments>
+<assign>
+<var>${user_dict}</var>
+</assign>
+<msg timestamp="20211207 16:20:05.455" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:20:05.454" endtime="20211207 16:20:05.455"></status>
+</kw>
+<msg timestamp="20211207 16:20:05.455" level="INFO">${user_dict} = {'id': '500', 'name': 'bodi', 'email': 'AppTest@test.com', 'gender': 'male', 'status': 'active'}</msg>
+<status status="PASS" starttime="20211207 16:20:05.454" endtime="20211207 16:20:05.455"></status>
+</kw>
+<kw name="Create a dictionary for a todo" library="resources">
+<assign>
+<var>${todo_dict}</var>
+</assign>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>id=500</arg>
+<arg>user_id=4</arg>
+<arg>title=AppTodo</arg>
+<arg>due_on=13-06-2021 5:43:02 PM</arg>
+<arg>status=pending</arg>
+</arguments>
+<assign>
+<var>${todo_dict}</var>
+</assign>
+<msg timestamp="20211207 16:20:05.456" level="INFO">${todo_dict} = {'id': '500', 'user_id': '4', 'title': 'AppTodo', 'due_on': '13-06-2021 5:43:02 PM', 'status': 'pending'}</msg>
+<status status="PASS" starttime="20211207 16:20:05.456" endtime="20211207 16:20:05.456"></status>
+</kw>
+<msg timestamp="20211207 16:20:05.456" level="INFO">${todo_dict} = {'id': '500', 'user_id': '4', 'title': 'AppTodo', 'due_on': '13-06-2021 5:43:02 PM', 'status': 'pending'}</msg>
+<status status="PASS" starttime="20211207 16:20:05.455" endtime="20211207 16:20:05.456"></status>
+</kw>
+<kw name="Add A Todo For A User" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${user_dict}</arg>
+<arg>${todo_dict}</arg>
+</arguments>
+<assign>
+<var>${todo_id}</var>
+<var>${user_id}</var>
+</assign>
+<msg timestamp="20211207 16:20:07.152" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20211207 16:20:07.152" level="INFO">${todo_id} = 2144</msg>
+<msg timestamp="20211207 16:20:07.152" level="INFO">${user_id} = 2806</msg>
+<status status="PASS" starttime="20211207 16:20:05.457" endtime="20211207 16:20:07.152"></status>
+</kw>
+<kw name="Verify If Todo Was Added" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${todo_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:20:07.748" level="INFO">id: 2144
+user_id: 2806
+title: AppTodo
+due_on: 2021-06-13T17:43:02.000+05:30
+status: pending</msg>
+<msg timestamp="20211207 16:20:07.749" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:20:07.153" endtime="20211207 16:20:07.749"></status>
+</kw>
+<kw name="Delete Todo" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${todo_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:20:08.376" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:20:07.749" endtime="20211207 16:20:08.377"></status>
+</kw>
+<kw name="Deleted Todo Should Not Exist" library="requests_api_app.ApiAPP">
+<arguments>
+<arg>${todo_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:20:09.726" level="INFO">Todo not found</msg>
+<msg timestamp="20211207 16:20:09.727" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:20:08.378" endtime="20211207 16:20:09.727"></status>
+</kw>
+<kw name="Delete User" library="requests_api_app.ApiAPP" type="teardown">
+<arguments>
+<arg>${user_id}</arg>
+</arguments>
+<msg timestamp="20211207 16:20:10.314" level="INFO">C:\Users\BPetre\AppData\Local\Programs\Python\Python310\Lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<status status="PASS" starttime="20211207 16:20:09.728" endtime="20211207 16:20:10.314"></status>
+</kw>
+<status status="PASS" starttime="20211207 16:20:05.453" endtime="20211207 16:20:10.314" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20211207 16:19:54.570" endtime="20211207 16:20:10.315"></status>
+</suite>
+<status status="PASS" starttime="20211207 16:19:49.309" endtime="20211207 16:20:10.318"></status>
+</suite>
+<status status="PASS" starttime="20211207 16:19:49.289" endtime="20211207 16:20:10.324"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0">Critical Tests</stat>
-<stat pass="4" fail="0">All Tests</stat>
+<stat pass="11" fail="0">Critical Tests</stat>
+<stat pass="11" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" id="s1" name="ApiTest">ApiTest</stat>
-<stat pass="4" fail="0" id="s1-s1" name="Api Tests">ApiTest.Api Tests</stat>
-<stat pass="4" fail="0" id="s1-s1-s1" name="Invalid Tests">ApiTest.Api Tests.Invalid Tests</stat>
+<stat pass="11" fail="0" id="s1" name="ApiTest">ApiTest</stat>
+<stat pass="11" fail="0" id="s1-s1" name="Api Tests">ApiTest.Api Tests</stat>
+<stat pass="3" fail="0" id="s1-s1-s1" name="Invalid Tests 1">ApiTest.Api Tests.Invalid Tests 1</stat>
+<stat pass="4" fail="0" id="s1-s1-s2" name="Invalid Tests 2">ApiTest.Api Tests.Invalid Tests 2</stat>
+<stat pass="4" fail="0" id="s1-s1-s3" name="Valid Tests">ApiTest.Api Tests.Valid Tests</stat>
 </suite>
 </statistics>
 <errors>
