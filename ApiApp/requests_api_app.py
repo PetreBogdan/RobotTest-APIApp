@@ -5,6 +5,8 @@ from post import Post
 from todo import Todo
 from comment import Comment
 import requests
+from cgi import log
+from py import _log
 
 class ApiAPP:
     
@@ -80,6 +82,13 @@ class ApiAPP:
             Todo.display_todo_by_id(id)
         except:
             print("Todo not found")
+            
+    def Invalid_dict_returns_http_error(self, user_dict):
+        try:
+            user1=User(user_dict)
+        except requests.exceptions.HTTPError as err:
+            print("User cannot be added")
+            
     # # Create user
     # user_dict = {'id': '500', 'name': 'bodi',
     #              'email': 'AppTest@test.com', 'gender': 'male',
